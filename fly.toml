@@ -24,3 +24,10 @@ primary_region = 'nrt'
   memory = '1gb'
   cpu_kind = 'shared'
   cpus = 1
+
+[deploy]
+  release_command = './bin/rails db:migrate'
+
+[[statics]]
+  guest_path = '/rails/public'
+  url_prefix = '/'
